@@ -1,23 +1,18 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
+import React from 'react';
 import './App.css';
-
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+// import Card from './components/Card';
+import Section from './components/Section';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar />
+      <Hero />
+      <Section title="Top Albums" fetchUrl="https://qtify-backend-labs.crio.do/albums/top" />
+<Section title="New Albums" fetchUrl="https://qtify-backend-labs.crio.do/albums/new" />
+
     </div>
   );
 }

@@ -1,0 +1,16 @@
+.hero_section {
+  background-color: #121212;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh; /* Adjust for vertical space like Figma */
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.hero_img {
+  width: 100%;
+  max-width: 1000px;
+  height: auto;
+  object-fit: contain;
+}
