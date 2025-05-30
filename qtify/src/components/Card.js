@@ -1,7 +1,6 @@
 import React from "react";
 import "./Card.css";
 import Chip from "@mui/material/Chip";
-import dummyImage from "../Assets/album a.png";
 
 function Card({ image, title, follows }) {
   return (
@@ -14,6 +13,5 @@ function Card({ image, title, follows }) {
     </div>
   );
 }
-
 
 export default Card;

@@ -6,7 +6,7 @@ import axios from "axios";
 
 function Section({ title, fetchUrl }) {
   const [albums, setAlbums] = useState([]);
-  const [showAll, setShowAll] = useState(true);
+  const [showAll, setShowAll] = useState(false); // show carousel by default
 
   useEffect(() => {
     axios.get(fetchUrl)
@@ -16,11 +16,7 @@ function Section({ title, fetchUrl }) {
 
   const renderCard = (album) => (
     <Card
-      image={
-        album.title.toLowerCase().includes("english")
-          ? require("../Assets/album b.png")
-          : require("../Assets/album b.png")
-      }
+      image={album.image}
       title={album.title}
       follows={album.follows}
     />
@@ -29,7 +25,7 @@ function Section({ title, fetchUrl }) {
   return (
     <div className="section">
       <div className="section-header">
-        <h3>{title}</h3>
+        <h3 className="section-title">{title}</h3>
         <button className="toggle-btn" onClick={() => setShowAll(!showAll)}>
           {showAll ? "Collapse" : "Show All"}
         </button>
@@ -37,18 +33,7 @@ function Section({ title, fetchUrl }) {
       <div className="section-content">
         {showAll ? (
           <div className="grid">
-            {albums.map((album, index) => (
-              <Card
-                key={index}
-                image={
-                  album.title.toLowerCase().includes("english")
-                    ? require("../Assets/album b.png")
-                    : require("../Assets/album a.png")
-                }
-                title={album.title}
-                follows={album.follows}
-              />
-            ))}
+            {albums.map((album, index) => renderCard(album))}
           </div>
         ) : (
           <Carousel data={albums} renderComponent={renderCard} />

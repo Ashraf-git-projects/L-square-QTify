@@ -1,10 +1,9 @@
-// src/components/Carousel.js
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
-import "./Carousel.css"; // for custom styles
+import "./Carousel.css";
 
 function Carousel({ data = [], renderComponent }) {
   return (

@@ -1,35 +1,32 @@
-.section-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  gap: 16px;
-  margin-top: 16px;
+.section {
+  padding: 2rem;
+  color: #fff;
 }
+
 .section-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 16px;
+  margin-bottom: 1rem;
 }
 
-.section-container {
-  padding: 1rem 2rem;
+.section-title {
+  color: white; /* Fixes invisible heading */
+  font-size: 1.5rem;
 }
 
-.card-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-  gap: 16px;
-}
 .toggle-btn {
+  background-color: transparent;
+  border: 1px solid #34c94b;
   color: #34c94b;
-  background: none;
-  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
   cursor: pointer;
-  font-weight: bold;
-  font-size: 14px;
 }
-.section-content .grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-  gap: 20px;
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: flex-start;
 }
