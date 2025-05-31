@@ -1,15 +1,18 @@
 import React from "react";
 import "./Card.css";
-import Chip from "@mui/material/Chip";
 
-function Card({ image, title, follows }) {
+function Card({ image, title, follows, likes, type = "album" }) {
   return (
-    <div className="card">
-      <img src={image} alt="album-cover" className="card-image" />
-      <div className="card-footer">
-        <Chip label={`${follows} Follows`} size="small" className="card-chip" />
-        <div className="card-title">{title}</div>
+    <div className="card-container">
+      <div className="card">
+        <img src={image} alt="cover" className="card-image" />
+        <div className="card-footer">
+          <div className="card-pill">
+            {type === "song" ? `${likes} Likes` : `${follows} Follows`}
+          </div>
+        </div>
       </div>
+      <div className="card-title">{title}</div>
     </div>
   );
 }

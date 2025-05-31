@@ -30,3 +30,16 @@
   gap: 1.5rem;
   justify-content: flex-start;
 }
+/* Section.css */
+.MuiTab-root {
+  color: white;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.MuiTabs-indicator {
+  background-color: #00ff84;
+}
+.section-content {
+  padding: 0 20px; /* Adds space on both sides */
+}

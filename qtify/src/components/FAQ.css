@@ -1,0 +1,38 @@
+.faq-section {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.faq-item {
+  background-color: #1e1e1e;
+  color: white;
+  margin: 1rem 0;
+  padding: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.faq-item.open {
+  background-color: white;
+  color: black;
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+}
+
+.faq-answer {
+  margin-top: 1rem;
+  font-weight: normal;
+}
+
+.faq-arrow {
+  transition: transform 0.3s ease;
+}
+h2{
+    color: aliceblue;
+}
