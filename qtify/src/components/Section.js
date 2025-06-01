@@ -43,7 +43,8 @@ function Section({ title, fetchUrl, isSongSection = false }) {
         <h3>{title}</h3>
         {!isSongSection && (
           <button className="toggle-btn" onClick={() => setShowAll(!showAll)}>
-            {showAll ? "Show All" : "Collapse"}
+            {showAll ? "Collapse" : "Show All"}
+
           </button>
         )}
       </div>
