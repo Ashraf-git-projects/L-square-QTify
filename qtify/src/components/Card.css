@@ -4,11 +4,7 @@
   flex-direction: column;
   font-family: Arial, sans-serif;
   color: white;
-  transition: transform 0.3s ease;
-}
-
-.card-container:hover {
-  transform: scale(1.05); /* Figma-like smooth scale on hover */
+  overflow: visible; /* Allow card to grow outside this container */
 }
 
 .card {
@@ -19,6 +15,11 @@
   display: flex;
   flex-direction: column;
   transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05); /* Apply scaling only here */
+  z-index: 10;
 }
 
 .card-image {
@@ -34,7 +35,7 @@
   height: 40px;
   display: flex;
   align-items: center;
-  padding: 0 12px; /* Add horizontal padding */
+  padding: 0 12px;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
 }
@@ -52,12 +53,13 @@
   margin-top: 8px;
   font-size: 14px;
   font-weight: 500;
-  text-align: left; /* Align left */
-  padding-left: 4px; /* Slight padding */
+  text-align: left;
+  padding-left: 4px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
