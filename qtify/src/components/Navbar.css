@@ -70,12 +70,15 @@
 .feedback-btn {
   padding: 6px 14px;
   background-color: #000;
-  color: #fff;
+   color: #34C94B;
   border: none;
   border-radius: 6px;
   font-size: 14px;
   cursor: pointer;
+  font-family: 'Poppins', sans-serif;
 }
+
+
 .navbar {
   display: flex;
   flex-direction: row;

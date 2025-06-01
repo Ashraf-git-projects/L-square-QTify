@@ -40,6 +40,12 @@ function App() {
       <Hero />
       <Section title="Top Albums" fetchUrl="https://qtify-backend-labs.crio.do/albums/top" />
       <Section title="New Albums" fetchUrl="https://qtify-backend-labs.crio.do/albums/new" />
+      <Section
+  title="Songs"
+  fetchUrl="https://qtify-backend-labs.crio.do/songs"
+  isSongSection={true}
+/>
+
       <FAQ />
     </div>
   );
