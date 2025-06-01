@@ -36,3 +36,22 @@
 h2{
     color: aliceblue;
 }
+.faq-section {
+  padding: 1rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .faq-section {
+    padding: 0.5rem;
+  }
+
+  .faq-question {
+    font-size: 16px;
+  }
+
+  .faq-answer {
+    font-size: 14px;
+  }
+}

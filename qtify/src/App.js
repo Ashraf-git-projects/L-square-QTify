@@ -5,10 +5,12 @@ import Hero from './components/Hero';
 import Section from './components/Section';
 import FAQ from './components/FAQ';
 import axios from 'axios';
+import FeedbackModal from "./components/FeedbackModal";
 
 function App() {
   const [albums, setAlbums] = useState([]);
   const [songs, setSongs] = useState([]);
+  const [isFeedbackOpen, setIsFeedbackOpen] = useState(false);
 
   useEffect(() => {
     // Fetch top albums and songs
@@ -30,7 +32,11 @@ function App() {
   return (
     <div className="App">
       {/* Pass combined data for search */}
-      <Navbar data={[...albums, ...songs]} />
+      <Navbar data={[...albums, ...songs]} onFeedbackClick={() => setIsFeedbackOpen(true)} />
+       <FeedbackModal
+        isOpen={isFeedbackOpen}
+        onClose={() => setIsFeedbackOpen(false)}
+      />
       <Hero />
       <Section title="Top Albums" fetchUrl="https://qtify-backend-labs.crio.do/albums/top" />
       <Section title="New Albums" fetchUrl="https://qtify-backend-labs.crio.do/albums/new" />

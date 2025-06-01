@@ -3,7 +3,7 @@ import "./Navbar.css";
 import logo from "../Assets/qtify_logo.png";
 import { FaSearch } from "react-icons/fa";
 
-function Navbar({ data = [] }) {
+function Navbar({ data = [] , onFeedbackClick }) {
   const [searchTerm, setSearchTerm] = useState("");
 
   const filteredResults = data.filter((item) =>
@@ -34,7 +34,9 @@ function Navbar({ data = [] }) {
           </div>
         )}
       </div>
-      <button className="feedback-btn">Give feedback</button>
+     <button className="feedback-btn" onClick={onFeedbackClick}>
+        Give feedback
+      </button>
     </nav>
   );
 }
