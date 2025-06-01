@@ -1,0 +1,15 @@
+.swiper {
+  padding: 20px 0;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: white;
+  top: 40%;
+  transform: translateY(-50%);
+}
+
+.swiper-button-disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}

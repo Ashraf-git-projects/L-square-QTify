@@ -16,6 +16,7 @@ function Navbar({ data = [] , onFeedbackClick }) {
       <div className="searchContainer">
         <input
           type="text"
+          aria-label="Search"
           placeholder="Search a song of your choice"
           className="search-bar"
           value={searchTerm}
@@ -35,7 +36,7 @@ function Navbar({ data = [] , onFeedbackClick }) {
         )}
       </div>
      <button className="feedback-btn" onClick={onFeedbackClick}>
-        Give feedback
+       Give Feedback
       </button>
     </nav>
   );
